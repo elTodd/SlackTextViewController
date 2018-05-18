@@ -234,6 +234,13 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface SLKTextViewController : UIViewController 
 - (void)didChangeKeyboardStatus:(SLKKeyboardStatus)status;
 
 
+/**
+ Making this public in order to allow it to be called in our subclassed view controllers.
+ This is necessary to fix some keyboard issues on newer version of iOS.
+ */
+- (void)slk_registerNotifications;
+
+
 #pragma mark - Interaction Notifications
 ///------------------------------------------------
 /// @name Interaction Notifications
